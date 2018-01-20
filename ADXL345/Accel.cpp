@@ -23,6 +23,7 @@ void Accel::GetAccels(float data[3]){
 		data[i] = v[i]*0.039;
 	}
 
+	/*
 	itoa(v[0],str,10);	
 	uart.put_str(" x");
 	uart.put_str(str);
@@ -33,14 +34,11 @@ void Accel::GetAccels(float data[3]){
 	uart.put_str(" z");
 	uart.put_str(str);
 	uart.put_str(" ");
+	*/
 }
 void Accel::read_data(int values[3]){
 	char data[6];
 	this->read_raw_data(data);
-		
-	//unsigned char l = this->read_addr(DATAX0);
-	// TODO: use multiple byte request via i2c. now addresing each time.
-	//values[0] = ((int)this->read_addr(DATAX1)<<8 )+ l;
 }
 void Accel::read_raw_data(char* d){
 	TWI twi;
@@ -51,7 +49,7 @@ void Accel::read_raw_data(char* d){
 
     twi.write_data((ACC_ADDR<<1)+1);   
 	twi.set_ack(1);								// Start sequental read
-	twi.read_data(d);     //TODO: find out why first byte is a7 always;
+	twi.read_data(d);     //TODO: find out why first byte is always 0xA7;
 	for(short i=0;i<5;i++){
 		twi.read_data(d+i);     
 	}
