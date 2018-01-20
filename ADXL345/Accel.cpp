@@ -1,6 +1,5 @@
 #include "Accel.h"
 
-
 Accel::Accel(void){
 };
 
@@ -13,31 +12,24 @@ void Accel::GetAccels(float data[3]){
 	int v[3];
 	char* vp = (char*)v;
 	char d[6];
-	this->read_raw_data(d);		// convert pointer to int into char and write all 6 bytes
 	this->read_raw_data(vp);		// convert pointer to int into char and write all 6 bytes
-	vp[2] = d[2];
-	vp[3] = d[3];	
+	/*
 	for(int i = 0;i<6;i++){
 		uart.put_char(d[i]);
 		_delay_ms(2);
 	}
-	char str[6];
-    int a = (int)d[0]>> 8;
-	   int x =a+ (int)d[1];
-	   x=v[0];
-	   y=v[1];
-	   z=v[2];
+	*/
+	for (short i=0;i<3;i++){
+		data[i] = v[i]*0.039;
+	}
 
-	data[0] = x*0.039;
-	data[1] = y*0.039;
-	data[2] = z*0.039;
-	itoa(x,str,10);	
+	itoa(v[0],str,10);	
 	uart.put_str(" x");
 	uart.put_str(str);
-	itoa(y,str,10);	
+	itoa(vp[1],str,10);	
 	uart.put_str(" y");
 	uart.put_str(str);
-	itoa(z,str,10);	
+	itoa(v[2],str,10);	
 	uart.put_str(" z");
 	uart.put_str(str);
 	uart.put_str(" ");
