@@ -1,4 +1,4 @@
-PRJ=accel
+PRJ=motors
 SRC=$(PRJ).cpp
 
 CFLAGS=-c -Wall

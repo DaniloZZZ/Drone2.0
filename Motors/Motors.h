@@ -1,5 +1,8 @@
 #ifndef _MOTORS_H
 #define _MOTORS_H 1
+#include <avr/interrupt.h>
+#include <avr/io.h>
+#include <avr/delay.h>
 
 class Motors{
 	public:
