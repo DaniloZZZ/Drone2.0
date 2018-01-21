@@ -11,7 +11,6 @@ int main(void){
 	USART uart;
 	Accel acc;
 	int mp[4] ={1,2,3,4};
-	Motors Ms(mp);
 	char raw[6];
 	float a[3];
 
@@ -27,7 +26,6 @@ int main(void){
 		float pitch = atan2(-a[0], sqrt(a[1]*a[1] + a[2]*a[2])) * 180/3.14;
 		char str[10];
 
-		/*
 		dtostrf(roll,6,4,str);
 		uart.put_str(" roll:");
 		uart.put_str(str);
@@ -36,7 +34,6 @@ int main(void){
 		uart.put_str(" pitch:");
 		uart.put_str(str);
 		uart.put_str("\n");
-		*/
 		PORTD = 0<<2;
 		_delay_ms(500);
 	} 
