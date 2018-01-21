@@ -4,7 +4,7 @@ SRC=$(PRJ).cpp
 CFLAGS=-c -Wall
 LDFLAGS=
 SOURCES=$(PRJ).cpp
-EXT=./USART ./ADXL345 ./i2c ./TWI
+EXT=./USART ./ADXL345 ./i2c ./TWI ./Motors
 OBJECTS=$(SOURCES:.cpp=.o)
 EXECUTABLE=hello
 
