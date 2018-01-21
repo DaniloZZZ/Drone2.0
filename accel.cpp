@@ -1,6 +1,7 @@
 #define F_CPU 16000000L
 #include "ADXL345/Accel.h"
 #include "USART/USART.h"
+#include "Motors/Motors.h"
 
 #include <avr/delay.h>
 #include <string.h>
@@ -9,6 +10,8 @@
 int main(void){
 	USART uart;
 	Accel acc;
+	int mp[4] ={1,2,3,4};
+	Motors Ms(mp);
 	char raw[6];
 	float a[3];
 
@@ -24,6 +27,7 @@ int main(void){
 		float pitch = atan2(-a[0], sqrt(a[1]*a[1] + a[2]*a[2])) * 180/3.14;
 		char str[10];
 
+		/*
 		dtostrf(roll,6,4,str);
 		uart.put_str(" roll:");
 		uart.put_str(str);
@@ -32,10 +36,7 @@ int main(void){
 		uart.put_str(" pitch:");
 		uart.put_str(str);
 		uart.put_str("\n");
-		//sprintf(strnum, "%d", vals[1]);
-		for(int i=0;i<6;i++){
-//			uart.put_char(raw[i]);
-		}
+		*/
 		PORTD = 0<<2;
 		_delay_ms(500);
 	} 
