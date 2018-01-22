@@ -23,7 +23,13 @@ ISR(TIMER1_COMPB_vect){
    	}
 	else{
 	val +=OneMs+sped[idx]*(2000/256.0/256.);
-	UDR0 = val>>8;
+	char str[10];
+	USART uart; 
+	sprintf(str,"%d,",sped[idx]);
+	uart.put_str(str);
+	//UDR0 = val>>8;
+	//UDR0 = sped[0]>>8;
+	//UDR0 = sped[0];
 	
 	if(idx==0){
 		TCNT1H=0;						// Reset Timer every 20ms

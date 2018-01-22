@@ -6,6 +6,7 @@
 #include "../i2c/i2cmaster.h"
 #include "../TWI/twimaster.h"
 #include "../USART/USART.h"
+#include <stdio.h>
 
 
 #define WRITE 0
