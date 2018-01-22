@@ -14,5 +14,5 @@ do
 	echo "$ln Lines read"
 	sleep 1s
 done
-kst2 ~/capture.log -f -1 -n 505 -P P1 -y 1 -y 3 -y 4 -P P2 -y 2 -s1
+kst2 ~/capture.log -f -1 -n 505 -P P1 -y 2 -y 3 -y 4 -P P2 -y 1 -s1
 

@@ -6,11 +6,7 @@
 #include "../i2c/i2cmaster.h"
 #include "../TWI/twimaster.h"
 #include "../USART/USART.h"
-<<<<<<< HEAD
 #include <stdio.h>
-=======
->>>>>>> 2093b71d77a2ea6c8cf53dee2c79a9a172f2d849
-
 
 #define WRITE 0
 #define READ 1

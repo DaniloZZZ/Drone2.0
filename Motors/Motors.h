@@ -6,11 +6,8 @@
 #include <avr/io.h>
 #include <avr/delay.h>
 #include <stdlib.h>
-<<<<<<< HEAD
 #include "../USART/USART.h"
 #include <stdio.h>
-=======
->>>>>>> 2093b71d77a2ea6c8cf53dee2c79a9a172f2d849
 
 extern "C" void TIMER1_COMPA_vect(void) __attribute__ ((signal));
 

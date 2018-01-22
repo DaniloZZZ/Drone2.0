@@ -23,17 +23,13 @@ ISR(TIMER1_COMPB_vect){
    	}
 	else{
 	val +=OneMs+sped[idx]*(2000/256.0/256.);
-<<<<<<< HEAD
-	char str[10];
-	USART uart; 
-	sprintf(str,"%d,",sped[idx]);
-	uart.put_str(str);
+	//char str[10];
+	//USART uart; 
+	//sprintf(str,"%d,",sped[idx]);
+	//uart.put_str(str);
 	//UDR0 = val>>8;
 	//UDR0 = sped[0]>>8;
 	//UDR0 = sped[0];
-=======
-	UDR0 = val>>8;
->>>>>>> 2093b71d77a2ea6c8cf53dee2c79a9a172f2d849
 	
 	if(idx==0){
 		TCNT1H=0;						// Reset Timer every 20ms
@@ -93,10 +89,3 @@ void Motors::Calibrate(void){
 	_delay_ms(1500);
 }
 
-
-void Motors::SetSpeedsP( int * const sp)const{
-	//this->SpeedsVals = sp;
-	for (short i = 0;i<4;i++){
-
-	}
-}

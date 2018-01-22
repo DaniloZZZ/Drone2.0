@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 PRJ=main
-=======
-PRJ=motors
->>>>>>> 2093b71d77a2ea6c8cf53dee2c79a9a172f2d849
 SRC=$(PRJ).cpp
 
 CFLAGS=-c -Wall
