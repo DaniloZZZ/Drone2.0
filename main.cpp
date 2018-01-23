@@ -32,6 +32,8 @@ int main(void){
 		mod = sqrt(a[0]*a[0]+a[1]*a[1]+a[2]*a[2]);
 		roll = atan2(a[1], a[2]) * 180/3.14;
 		pitch = atan2(-a[0], sqrt(a[1]*a[1] + a[2]*a[2])) * 180/3.14;
+		// Th copter probably will not be at angles bigger than 0.3
+		// TODO: measure excec time and find time consuming parts
 		mod = _mod*(1-al) +al*mod;
 		_mod = mod;
 		pitch = _pitch*(1-al) +al*pitch;
@@ -62,6 +64,6 @@ int main(void){
 		uart.put_str("\n");
 		*/
 		PORTD = 0<<2;
-		_delay_ms(10);
+		_delay_ms(3);
 	} 
 }

@@ -78,13 +78,13 @@ void Motors::ConfPins(void){
 void Motors::Calibrate(void){
 	for (short i = 0;i<MCNT;i++){
 		this->SpeedsVals[i]=0xFFFF;
-		UDR0 =0xff;
+		//UDR0 =0xff;
 	}
 	// TODO: make this work on interrupts to init drone faster
 	_delay_ms(1500);
 	for (short i = 0;i<MCNT;i++){
 		this->SpeedsVals[i]=0x00;
-		UDR0 =0x0000;
+		//UDR0 =0x0000;
 	}
 	_delay_ms(1500);
 }
