@@ -3,7 +3,7 @@
 
 #include <avr/io.h>
 #include <stdlib.h>
-#include "../i2c/i2cmaster.h"
+//#include "../i2c/i2cmaster.h"
 #include "../TWI/twimaster.h"
 #include "../USART/USART.h"
 #include <stdio.h>

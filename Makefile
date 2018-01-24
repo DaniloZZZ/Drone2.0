@@ -1,10 +1,10 @@
-PRJ=main
+PRJ=gyro
 SRC=$(PRJ).cpp
 
 CFLAGS=-c -Wall
 LDFLAGS=
 SOURCES=$(PRJ).cpp
-EXT=./USART ./ADXL345 ./i2c ./TWI ./Motors
+EXT=./USART ./ADXL345 ./i2c ./TWI ./Motors ./Gyro
 OBJECTS=$(SOURCES:.cpp=.o)
 EXECUTABLE=hello
 
