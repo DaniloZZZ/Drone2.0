@@ -30,8 +30,9 @@ void ITG3200::GetRotSpeeds(float data[3]){
 	//swap(vp+2,vp+3);
 	//swap(vp+4,vp+5);
 	for (short i=0;i<3;i++){
-		data[i] = v[i]*0.0619;
+		data[i] = (float)v[i]*0.00105;
 	}
+	data[0]-=13;
 }
 
 void ITG3200::read_raw(char*d){

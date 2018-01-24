@@ -1,4 +1,4 @@
-PRJ=gyro
+PRJ=main
 SRC=$(PRJ).cpp
 
 CFLAGS=-c -Wall

@@ -1,7 +1,7 @@
 #include "Motors.h"
 static int OneMs = 2000;
-unsigned int sped[MCNT] = {1};
-unsigned int pin[MCNT] = {0};
+unsigned int sped[MCNT] = {1,1};
+unsigned int pin[MCNT] = {0,1};
 unsigned int pinport[4] = {PORTC,PORTC,PORTC,PORTC};
 static int idx = 0;
 int val = 0;

@@ -1,3 +1,5 @@
+#ifndef _TWI_H
+#define _TWI_H 1
 #include <avr/io.h>
 #define i2c_PORT	PORTC		// Порт где сидит нога TWI
 #define i2c_DDR		DDRC
@@ -18,3 +20,4 @@ class TWI{
 		void stop(void);
 	
 };
+#endif

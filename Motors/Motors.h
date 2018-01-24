@@ -1,6 +1,6 @@
 #ifndef _MOTORS_H
 #define _MOTORS_H 1
-#define MCNT 1
+#define MCNT 2
 
 #include <avr/interrupt.h>
 #include <avr/io.h>
